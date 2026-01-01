@@ -45,6 +45,7 @@ local ORDERED_MESSAGES = {
     "WWFCMsgKickedCustom",
     "WWFCMsgConsoleMismatch",
     "WWFCMsgConsoleMismatchDolphin",
+    "WWFCMsgCSNUMMismatch",
     "WWFCMsgProfileIDInvalid",
     "WWFCMsgProfileIDInUse",
     "WWFCMsgPayloadInvalid",

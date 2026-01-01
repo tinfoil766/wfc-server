@@ -597,6 +597,13 @@ func (g *GameSpySession) performLoginWithDatabase(userId uint64, gsbrCode string
 					WWFCMessage: WWFCMsgConsoleMismatch,
 				})
 			}
+		} else if err == database.ErrCsnumMismatch {
+			g.replyError(GPError{
+				ErrorCode:   ErrLogin.ErrorCode,
+				ErrorString: "The csnum does not match the one on record.",
+				Fatal:       true,
+				WWFCMessage: WWFCMsgCSNUMMismatch,
+			})
 		} else if err == database.ErrProfileBannedTOS {
 			g.replyError(GPError{
 				ErrorCode:   ErrLogin.ErrorCode,

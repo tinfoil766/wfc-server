@@ -1221,6 +1221,24 @@ var (
 		},
 	}
 
+	WWFCMsgCSNUMMismatch = WWFCErrorMessage{
+		ErrorCode: 22005,
+		MessageRMC: map[byte]string{
+			LangEnglish: "" +
+				"The serial of the console you are using\n" +
+				"is not the serial used to register\n" +
+				"this profile.\n" +
+				"\n" +
+				"Error Code: %[1]d",
+			LangGerman: "" +
+				"Die Konsole, die du gerade nutzt,\n" +
+				"ist nicht dieselbe, mit der dieses\n" +
+				"Profil erstellt wurde.\n" +
+				"\n" +
+				"Fehlercode: %[1]d",
+		},
+	}
+
 	WWFCMsgProfileIDInvalid = WWFCErrorMessage{
 		ErrorCode: 22006,
 		MessageRMC: map[byte]string{
@@ -1632,5 +1650,5 @@ var (
 				"Código de Erro: %[1]d",
 		},
 	}
-
 )
+
