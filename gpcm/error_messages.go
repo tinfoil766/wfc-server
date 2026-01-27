@@ -53,6 +53,11 @@ var (
 				"произошла ошибка.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"حدث خطأ غير معروف أثناء\n" +
+				"تسجيل الدخول إلى Retro WFC.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Retro Rewind'a giriş yaparken\n" +
 				"bilinmeyen bir hata oluştu.\n" +
@@ -67,7 +72,7 @@ var (
 				"Une erreur inconnue s'est produite\n" +
 				"pendant la connexion à Retro WFC.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d",
+				"Code d'erreur:  %[1]d",
 			LangSpanishEU: "" +
 				"Un error desconocido ha ocurrido\n" +
 				"al conectarse a Retro WFC.\n" +
@@ -147,6 +152,13 @@ var (
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"أنت تستخدم NAND مسرّب تم حظره بالفعل.\n" +
+				"يرجى إعادة NAND إلى الإعداد الافتراضي لـ Dolphin.\n" +
+				"افتح تذكرة على discord.gg/retrorewind للمساعدة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Kullandığınız NAND (sistem dosyaları) sızdırılmış.\n" +
 				"Lütfen NAND'inizi Dolphin varsayılanına geri çevirin.\n" +
@@ -159,8 +171,8 @@ var (
 				"Veuillez retirer votre NAND de Dolphin.\n" +
 				"Un ticket peut être fait sur discord.gg/retrorewind si besoin.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur:  %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás usando una NAND filtrada que ya está baneada.\n" +
 				"Por favor usa la NAND predeterminada por Dolphin.\n" +
@@ -249,6 +261,12 @@ var (
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"تم حظرك من Retro WFC\n" +
+				"بسبب انتهاك شروط الخدمة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Hizmet Şartlarını ihlal ettiğinizden\n" +
 				"dolayı Retro WFC'ye erişiminiz\n" +
@@ -259,10 +277,10 @@ var (
 			LangFrenchEU: "" +
 				"Vous avez été banni(e) de Retro WFC\n" +
 				"à cause d'une violation des\n" +
-				"Conditions de Service.\n" +
+				"conditions de service.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur:  %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de Retro WFC\n" +
 				"debido a una violación de los\n" +
@@ -351,6 +369,12 @@ var (
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"تم حظرك من Retro WFC\n" +
+				"بسبب انتهاك شروط الخدمة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Hizmet Şartlarını ihlal ettiğinizden\n" +
 				"dolayı Retro WFC'ye erişiminiz\n" +
@@ -363,8 +387,8 @@ var (
 				"à cause d'une violation des\n" +
 				"Conditions de Service.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur:  %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de Retro WFC\n" +
 				"debido a una violación de los\n" +
@@ -452,6 +476,13 @@ var (
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"تم حظرك من المباريات\n" +
+				"العامة بسبب انتهاك\n" +
+				"قواعد Retro WFC.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Retro WFC kurallarını ihlal\n" +
 				"ettiğinizden dolayı herkese\n" +
@@ -464,8 +495,8 @@ var (
 				"public à cause d'un violation d'une\n" +
 				"des règles de Retro WFC.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur:  %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de partidas públicas\n" +
 				"debido a una violación de las\n" +
@@ -553,6 +584,13 @@ var (
 				"\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"لقد تم حظرك من المباريات\n" +
+				"العامة بسبب انتهاك\n" +
+				"قواعد Retro WFC.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Retro WFC kurallarını ihlal\n" +
 				"ettiğinizden dolayı herkese\n" +
@@ -565,8 +603,8 @@ var (
 				"publics à cause d'un violation d'une\n" +
 				"des règles de Retro WFC.\n" +
 				"\n" +
-				"Code Erreur:  %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur:  %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de partidas públicas\n" +
 				"debido a una violación de las\n" +
@@ -639,6 +677,11 @@ var (
 				"Причина: %[3]s\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"تم حظرك من المباريات العامة.\n" +
+				"السبب: %[3]s\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Herkese açık yarışlara\n" +
 				"erişiminiz yasaklanmıştır.\n" +
@@ -648,8 +691,8 @@ var (
 			LangFrenchEU: "" +
 				"Vous êtes banni(e) des matchs publics.\n" +
 				"Raison: %[3]s\n" +
-				"Error Code: %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur: %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de partidas públicas.\n" +
 				"Motivo: %[3]s\n" +
@@ -718,6 +761,11 @@ var (
 				"Причина: %[3]s\n" +
 				"Код ошибки: %[1]d\n" +
 				"Информация для поддержки: NG%08[2]x",
+			LangArabic: "" +
+				"تم حظرك من المباريات العامة.\n" +
+				"السبب: %[3]s\n" +
+				"رمز الخطأ: %[1]d\n" +
+				"معلومات الدعم: NG%08[2]x",
 			LangTurkish: "" +
 				"Herkese açık yarışlara\n" +
 				"erişiminiz yasaklanmıştır.\n" +
@@ -727,8 +775,8 @@ var (
 			LangFrenchEU: "" +
 				"Vous êtes banni(e) des matchs publics.\n" +
 				"Raison: %[3]s\n" +
-				"Error Code: %[1]d\n" +
-				"Information Support: NG%08[2]x",
+				"Code d'erreur: %[1]d\n" +
+				"Information support: NG%08[2]x",
 			LangSpanishEU: "" +
 				"Estás baneado de partidas públicas.\n" +
 				"Motivo: %[3]s\n" +
@@ -790,6 +838,10 @@ var (
 				"Вас выгнали из Retro WFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"لقد تم طردك من Retro WFC.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Retro WFC'den atıldınız.\n" +
 				"\n" +
@@ -798,7 +850,7 @@ var (
 				"Vous avez été expulsé de\n" +
 				"Retro WFC.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Te han expulsado de Retro WFC.\n" +
 				"\n" +
@@ -863,6 +915,11 @@ var (
 				"из Retro WFC.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"لقد تم طردك من Retro WFC\n" +
+				"بواسطة مشرف.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Bir moderatör tarafından\n" +
 				"Retro WFC'den atıldınız.\n" +
@@ -872,7 +929,7 @@ var (
 				"Vous avez été expulsé de\n" +
 				"Retro WFC par un modérateur.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Un moderador te ha\n" +
 				"expulsado de Retro WFC.\n" +
@@ -936,6 +993,11 @@ var (
 				"Создатель группы выгнал вас.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"لقد تم طردك من غرفة\n" +
+				"الأصدقاء بواسطة منشئ الغرفة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Oda kurucusu tarafından\n" +
 				"odadan atıldınız.\n" +
@@ -945,7 +1007,7 @@ var (
 				"Vous avez été expulsé de la salle\n" +
 				"par le créateur.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"El creador de la sala te ha\n" +
 				"expulsado de ella.\n" +
@@ -1011,6 +1073,11 @@ var (
 				"\n" +
 				"Причина: %[3]s\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"لقد تم طردك من Retro WFC.\n" +
+				"\n" +
+				"السبب: %[3]s\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Retro WFC'den atıldınız.\n" +
 				"\n" +
@@ -1020,7 +1087,7 @@ var (
 				"Vous avez été expulsé de\n" +
 				"Retro WFC.\n" +
 				"Raison: %[3]s\n" +
-				"Error Code: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Te han expulsado de Retro WFC.\n" +
 				"Motivo: %[3]s\n" +
@@ -1094,6 +1161,12 @@ var (
 				"на другой консоли.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"هذا الجهاز الذي تستخدمه ليس\n" +
+				"الجهاز المسجل به هذا الملف\n" +
+				"الشخصي.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Kullandığınız konsol, kaydolduğunuz\n" +
 				"profille aynı değil.\n" +
@@ -1104,7 +1177,7 @@ var (
 				"n'est pas l'appareil utilisé pour\n" +
 				"enregistrer ce profil.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"La consola que estas usando no es el\n" +
 				"dispositivo usado para registrar este\n" +
@@ -1191,6 +1264,13 @@ var (
 				"память NAND настроена правильно.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"هذا الجهاز الذي تستخدمه ليس\n" +
+				"الجهاز المسجل به هذا الملف\n" +
+				"الشخصي. يرجى التأكد من\n" +
+				"إعداد NAND بشكل صحيح.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Kullandığınız konsol, kaydolduğunuz\n" +
 				"profille aynı değil.\n" +
@@ -1198,12 +1278,12 @@ var (
 				"\n" +
 				"Hata Kodu: %[1]d",
 			LangFrenchEU: "" +
-				"La consonle que vous utilisé\n" +
-				"n'est pas l'appareil utilisé pour\n" +
-				"enregistrer ce profil. Assurez-vous d'avoir\n" +
+				"La consonle que vous utilisez n'est pas\n" +
+				"l'appareil utilisé lors de l'enregistrement\n" +
+				"de ce profil. Assurez-vous d'avoir\n" +
 				"configuré votre NAND correctement.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"La consola que estas usando no es el\n" +
 				"dispositivo usado para registrar este\n" +
@@ -1224,6 +1304,12 @@ var (
 	WWFCMsgCSNUMMismatch = WWFCErrorMessage{
 		ErrorCode: 22005,
 		MessageRMC: map[byte]string{
+			LangJapanese: "" +
+				"あなたが使用しているコンソールの\n" +
+				"シリアルナンバーが このプロファイル登録に\n" +
+				"使用したシリアルナンバーと ことなっています\n" +
+				"\n" +
+				"エラーコード: %[1]d",
 			LangEnglish: "" +
 				"The serial of the console you are using\n" +
 				"is not the serial used to register\n" +
@@ -1236,6 +1322,36 @@ var (
 				"Profil erstellt wurde.\n" +
 				"\n" +
 				"Fehlercode: %[1]d",
+			LangSpanish: "" +
+				"El código serial de la consola\n" +
+				"que estás usando no es el serial\n" +
+				"usado para registrar este perfil.\n" +
+				"\n" +
+				"Código de Error: %[1]d",
+			LangDutch: "" +
+				"Het serienummer van de console die je gebruikt\n" +
+				"komt niet overeen met diegene die is gebruikt\n" +
+				"om dit profiel te registreren.\n" +
+				"\n" +
+				"Foutcode: %[1]d",
+			LangCzech: "" +
+				"Seriál konzole, kterou používáš,\n" +
+				"není seriálem použitým k registraci\n" +
+				"tohoto profilu.\n" +
+				"\n" +
+				"Kód Chyby: %[1]d",
+			LangArabic: "" +
+				"الرقم التسلسلي لهذا الجهاز الذي\n" +
+				"تستخدمه ليس الرقم التسلسلي\n" +
+				"المسجل به هذا الملف الشخصي.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
+			LangFrenchEU: "" +
+				"Le numéro de série de la console que\n" +
+				"vous utilisez n'est pas celui utilisé\n" +
+				"lors de l'enregistrement de ce profil.\n" +
+				"\n" +
+				"Code d'erreur: %[1]d",
 		},
 	}
 
@@ -1301,6 +1417,12 @@ var (
 				"Создайте новое удостоверение.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"معرف الملف الشخصي (ID) الذي\n" +
+				"تحاول تسجيله غير صالح.\n" +
+				"يرجى إنشاء رخصة جديدة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Kaydolmak istediğiniz profil ID'si\n" +
 				"geçerli bir ID değil.\n" +
@@ -1312,7 +1434,7 @@ var (
 				"d'enregistrer est invalide.\n" +
 				"Veuillez créer une nouveau permis.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"El perfil que está tratando de\n" +
 				"registrar es invalido.\n" +
@@ -1379,6 +1501,11 @@ var (
 				"зарегистрировать, уже занят.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"رمز الصديق الذي تحاول\n" +
+				"تسجيله مستخدم بالفعل.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Kaydolmak istediğiniz arkadaş kodu\n" +
 				"zaten kullanımda.\n" +
@@ -1388,7 +1515,7 @@ var (
 				"Le code ami que vous essayez\n" +
 				"d'enregistrer est déjà utilisé.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"La clave de amigo que está tratando\n" +
 				"de registrar, ya está en uso.\n" +
@@ -1455,6 +1582,11 @@ var (
 				"Retro WFC. Перезапустите игру.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"الـ Retro WFC payload غير صالح.\n" +
+				"حاول إعادة تشغيل لعبتك.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Retro WFC payloud'u geçerli değil.\n" +
 				"Oyunu yeniden başlatmayı deneyin.\n" +
@@ -1464,7 +1596,7 @@ var (
 				"Le payload Retro WFC est invalide.\n" +
 				"Veuillez redémarrer votre jeu.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Retro WFC no cargó correctamente\n" +
 				"Intente reiniciar su juego.\n" +
@@ -1536,6 +1668,12 @@ var (
 				"ГР или БР.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"تم قطع اتصالك من Retro WFC\n" +
+				"بسبب قيمة نقاط السباق أو\n" +
+				"نقاط المعركة غير صالحة.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Hatalı bir KP veya SP\n" +
 				"değerinden dolayı Retro WFC'ye\n" +
@@ -1547,7 +1685,7 @@ var (
 				"Retro WFC à cause d'une valeur invalide\n" +
 				"de Points Course ou Points Bataille.\n" +
 				"\n" +
-				"Code Erreur: %[1]d",
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Fuiste desconectado debido a discrepancias\n" +
 				"con tu valor de PC o PB.\n" +
@@ -1624,6 +1762,12 @@ var (
 				"или переустановите RR.\n" +
 				"\n" +
 				"Код ошибки: %[1]d",
+			LangArabic: "" +
+				"إصدار الـPack غير صالح!\n" +
+				"يرجى تحديث الحزمة أو\n" +
+				"إعادة تثبيتها لتسجيل الدخول.\n" +
+				"\n" +
+				"رمز الخطأ: %[1]d",
 			LangTurkish: "" +
 				"Geçersiz mod sürümü!\n" +
 				"Oynayabilmek için lütfen mod'u\n" +
@@ -1633,8 +1777,8 @@ var (
 			LangFrenchEU: "" +
 				"Version du pack invalide!\n" +
 				"Veuillez mettre à jour ou réinstaller\n" +
-				"le pack pour se connecter.\n" +
-				"Code Erreur: %[1]d",
+				"le pack afin de vous connecter.\n" +
+				"Code d'erreur: %[1]d",
 			LangSpanishEU: "" +
 				"Versión del mod invalido.\n" +
 				"Actualize o reinstale el pack para\n" +
@@ -1650,5 +1794,5 @@ var (
 				"Código de Erro: %[1]d",
 		},
 	}
-)
 
+)
