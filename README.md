@@ -28,7 +28,7 @@ using Retro Rewind's modified payload and modified Pulsar.
 
 You will need:
 - A Go compiler (minimum 1.25.5)
-- A copy of the payload (see [wfc-patcher-wii](https://github.com/Retro-Rewind-Team/wfc-patcher-wii/ for instructions))
+- A copy of the payload (see [wfc-patcher-wii](https://github.com/Retro-Rewind-Team/wfc-patcher-wii/) for instructions)
     - The payload's `dist` folder should be copied into the same folder as the executable and named `payload`
 - PostgreSQL
 
