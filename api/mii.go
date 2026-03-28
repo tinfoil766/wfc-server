@@ -17,7 +17,7 @@ type MiiResponse struct {
 }
 
 var MiiRoute = MakeRouteSpec[MiiRequest, MiiResponse](
-	true,
+	false,
 	"/api/mii",
 	HandleMii,
 	http.MethodPost,
@@ -28,14 +28,24 @@ func HandleMii(req any, v bool, r *http.Request) (any, int, error) {
 	res := MiiResponse{}
 
 	if _req.ProfileID == 0 {
-		return nil, http.StatusBadRequest, ErrPIDMissing
+		return res, http.StatusBadRequest, ErrPIDMissing
 	}
 
-	res.Mii = database.GetMKWFriendInfo(pool, ctx, _req.ProfileID)
+	var mii string
+	var err error = nil
 
-	if res.Mii == "" {
-		return nil, http.StatusInternalServerError, ErrUserQuery
+	if v {
+		mii = database.GetMKWFriendInfo(pool, ctx, _req.ProfileID)
+	} else {
+		mii, err = database.GetMKWFriendInfoSanitized(pool, ctx, _req.ProfileID)
 	}
 
+	if mii == "" && err == nil {
+		return res, http.StatusInternalServerError, ErrUserQuery
+	} else if err != nil {
+		return res, http.StatusInternalServerError, err
+	}
+
+	res.Mii = mii
 	return res, http.StatusOK, nil
 }

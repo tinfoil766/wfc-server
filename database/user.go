@@ -2,6 +2,7 @@ package database
 
 import (
 	"context"
+	"encoding/base64"
 	"errors"
 	"math/rand"
 	"time"
@@ -72,6 +73,7 @@ type User struct {
 var (
 	ErrProfileIDInUse         = errors.New("profile ID is already in use")
 	ErrReservedProfileIDRange = errors.New("profile ID is in reserved range")
+	ErrFailedToGetMKWFriend   = errors.New("failed to get MKW friend info")
 )
 
 func (user *User) CreateUser(pool *pgxpool.Pool, ctx context.Context) error {
@@ -251,6 +253,40 @@ func GetMKWFriendInfo(pool *pgxpool.Pool, ctx context.Context, profileId uint32)
 	}
 
 	return info
+}
+
+// GetMKWFriendInfoSanitized Returns the b64 representation of a mii with the birthdate, creation date, creator, and sysid removed
+func GetMKWFriendInfoSanitized(pool *pgxpool.Pool, ctx context.Context, profileId uint32) (string, error) {
+	mii := GetMKWFriendInfo(pool, ctx, profileId)
+
+	if mii == "" {
+		return "", ErrFailedToGetMKWFriend
+	}
+
+	miiBytes, err := base64.StdEncoding.DecodeString(mii)
+
+	if err != nil {
+		return "", err
+	}
+
+	for i := range 4 {
+		// Zero sysid
+		miiBytes[0x1C+i] = 0
+	}
+
+	// Zero creation timestamp
+	// Keep top 3 bits of the first byte (special, foreign, regular)
+	miiBytes[0x18] = miiBytes[0x18] & 0xE0
+	miiBytes[0x19] = 0
+	miiBytes[0x1A] = 0
+	miiBytes[0x1B] = 0
+
+	// Zero creator name
+	for i := 0x36; i < 0x49; i++ {
+		miiBytes[i] = 0
+	}
+
+	return base64.RawStdEncoding.EncodeToString(miiBytes), nil
 }
 
 func UpdateMKWFriendInfo(pool *pgxpool.Pool, ctx context.Context, profileId uint32, info string) {
