@@ -13,6 +13,7 @@ Retro Wi-Fi Connection is a fork of WiiLink WFC. This repository contains numero
   - Setting the Message of the Day without resetting the server
 - Extended max VR (Up to 30k, Retro Rewind's higher VR is handled client side)
 - Client hash checking to ensure only clients on the most up-to-date version may log in
+  - See [Hashing](#hashing)
 - Adjustments to ban logic to better facilitate nand-less play
 - Improved translations and extended language support
 - Reporting of kick/ban reasons to the client
@@ -41,7 +42,25 @@ You will need:
 
 #### Hashing
 
-Since clients are required to submit a hash to connect, this must be configured
-on launch. You can either disable hash checking (see `enableHashCheck` in
-`config.xml`) or use [wfc-bot](https://github.com/Retro-Rewind-Team/wfc-bot/)
-to submit hashes.
+For hashing to work, both clients and the server must be configured properly.
+Clients submit a PackID, a Version, and a Hash on connecting, which are
+configured in rr-pulsar. These fields must be populated in the server if you do
+not disable `enableHashCheck` in `config.xml`. You can set them in one of two
+ways:
+
+##### wfc-bot
+For this you must host and configure an instance of
+[wfc-bot](https://github.com/Retro-Rewind-Team/wfc-bot/). You can then use the
+`hash` command to submit your Code.pul. Clients must then connect with this
+exact Code.pul. See the [Note](#note)
+
+##### pulsar-tools
+1. Download the latest release of
+   [pulsar-toos](https://github.com/ppebb/pulsar-tools/releases).
+2. Run the hash command, and supply your Code.pul
+3. Manually insert the hashes returned by pulsar-tools into your database
+4. The database contains a hashes table, which contains the fields pack_id, version, hash_pal, hash_ntscu, hash_ntscj, hash_ntsck. Insert according to these fields.
+
+**NOTE**: Since these tools were developed with RWFC in mind, you will either have to
+modify the bot and server source code to display the correct names, or you can
+reuse one of the existing slots and accept they will have the wrong name.
