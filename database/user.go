@@ -32,6 +32,7 @@ const (
 
 	GetMKWFriendInfoQuery    = `SELECT mariokartwii_friend_info FROM users WHERE profile_id = $1`
 	UpdateMKWFriendInfoQuery = `UPDATE users SET mariokartwii_friend_info = $2 WHERE profile_id = $1`
+	CountTotalUsersQuery     = `SELECT COUNT(DISTINCT csnum) FROM users`
 )
 
 type LinkStage byte
@@ -74,6 +75,7 @@ var (
 	ErrProfileIDInUse         = errors.New("profile ID is already in use")
 	ErrReservedProfileIDRange = errors.New("profile ID is in reserved range")
 	ErrFailedToGetMKWFriend   = errors.New("failed to get MKW friend info")
+	ErrCountHasNoRows         = errors.New("failed to count active users, result has no rows")
 )
 
 func (user *User) CreateUser(pool *pgxpool.Pool, ctx context.Context) error {
@@ -333,4 +335,23 @@ func ScanUsers(pool *pgxpool.Pool, ctx context.Context, query string) ([]User, e
 	}
 
 	return users, nil
+}
+
+func CountTotalUsers(pool *pgxpool.Pool, ctx context.Context) (int, error) {
+	logging.Info("QUERY", "Counting players")
+
+	rows, err := pool.Query(ctx, CountTotalUsersQuery)
+	if err != nil {
+		return 0, err
+	}
+
+	defer rows.Close()
+	if !rows.Next() {
+		return 0, ErrCountHasNoRows
+	}
+
+	var count int
+	rows.Scan(&count)
+
+	return count, nil
 }

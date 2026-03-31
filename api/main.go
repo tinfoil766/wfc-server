@@ -102,6 +102,7 @@ func StartServer(reload bool) {
 		MiiRoute,
 		MotdRoute,
 		NewPlayersRoute,
+		PCountRoute,
 		PinfoRoute,
 		QueryRoute,
 		RemoveHashRoute,
