@@ -8,6 +8,11 @@ import (
 var motdFilepath = "./motd.txt"
 var motd string = ""
 
+var (
+	ErrEmptyMotd   = errors.New("motd cannot be empty")
+	ErrMotdTooLong = errors.New("motd is too long, max motd is 255 characters")
+)
+
 func GetMessageOfTheDay() (string, error) {
 	if motd == "" {
 		contents, err := os.ReadFile(motdFilepath)
@@ -23,7 +28,11 @@ func GetMessageOfTheDay() (string, error) {
 
 func SetMessageOfTheDay(nmotd string) error {
 	if nmotd == "" {
-		return errors.New("Motd cannot be empty")
+		return ErrEmptyMotd
+	}
+
+	if len(nmotd) > 255 {
+		return ErrMotdTooLong
 	}
 
 	err := os.WriteFile(motdFilepath, []byte(nmotd), 0644)
